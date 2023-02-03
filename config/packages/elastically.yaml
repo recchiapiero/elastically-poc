@@ -1,0 +1,23 @@
+elastically:
+    connections:
+        default:
+            client:
+                host:                '%env(OPENSEARCH_HOST)%'
+                # If you want to use the Symfony Http Client:
+                transport:           'JoliCode\Elastically\Transport\HttpClientTransport'
+
+            # Path to the mapping directory (in YAML)
+            mapping_directory:       '%kernel.project_dir%/config/opensearch'
+            
+            # Size of the bulk sent to Elasticsearch (default to 100)
+            bulk_size:               100
+
+            # Mapping between an index name and a FQCN
+            index_class_mapping:
+                product:     App\Dto\Product
+
+            # Configuration for the serializer
+            serializer:
+                # Fill a static context
+                context_mapping:
+                    foo:                 bar
