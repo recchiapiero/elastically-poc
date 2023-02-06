@@ -17,7 +17,7 @@ class Offer
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
-    #[ORM\Column]
+    #[ORM\Column(type: Types::DECIMAL, precision: 6, scale: 2)]
     private ?float $price = null;
 
     #[ORM\ManyToOne(inversedBy: 'offers')]

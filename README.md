@@ -10,7 +10,7 @@ A [Elastically](https://github.com/jolicode/elastically) POC using [OpenSearch](
 4. Run `docker compose exec php bin/console doctrine:migration:migrate` and answer yes
 5. Run `docker compose exec php bin/console doctrine:fixtures:load` and answer yes
 6. Run `docker compose exec php bin/console app:populate-index`
-4. Open `https://localhost` in your favorite web browser and [accept the auto-generated TLS certificate](https://stackoverflow.com/a/15076602/1352334) make a search, examples: games, video, audio phones.
+4. Open `https://localhost` in your favorite web browser and [accept the auto-generated TLS certificate](https://stackoverflow.com/a/15076602/1352334) make a search, examples: video, audio, phones.
 5. Run `docker compose down --remove-orphans` to stop the Docker containers.
 
 
