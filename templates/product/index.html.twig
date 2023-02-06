@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProductController!{% endblock %}
+{% block title %}OpenSearch POC{% endblock %}
 
 {% block body %}
 <style>
@@ -9,8 +9,38 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Products List ✅</h1>
+    <h1>Products List</h1>
+    {{ form_start(form, {'method': 'POST'}) }}
+    {{ form_errors(form) }}
 
-    This friendly message is coming from:{{ dump(products) }}
+    {{ form_row(form.search) }}
+
+    {{ form_row(form.submit, { 'label': 'Search' }) }}
+    {{ form_end(form) }}
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Offers</th>
+            </tr>
+        </thead>
+        <tbody>
+                {% for product in products %}
+                    <tr>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.category }}</td>
+                        <td>
+                            <ol>
+                                {% for offer in product.offers %}
+                                    <li>{{ offer.price }}</li>
+                                {% endfor %}
+                            </ol>
+                        </td>
+                    </tr>
+                {% endfor %}
+        </tbody>
+    </table>
 </div>
 {% endblock %}
