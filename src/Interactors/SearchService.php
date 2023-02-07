@@ -15,7 +15,7 @@ class SearchService
         $this->client = $client;
     }
 
-    public function search(string $query) : array
+    public function search(string $query): array
     {
         $searchQuery = new MultiMatch();
         $searchQuery->setFields([
@@ -42,5 +42,4 @@ class SearchService
 
         return $data;
     }
-
 }

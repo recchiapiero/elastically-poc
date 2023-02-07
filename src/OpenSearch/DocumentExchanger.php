@@ -18,7 +18,7 @@ class DocumentExchanger implements DocumentExchangerInterface
 
     public function fetchDocument(string $className, string $id): ?Document
     {
-        if ($className === Product::class) {
+        if (Product::class === $className) {
             $product = $this->productRepository->find($id);
 
             if ($product) {

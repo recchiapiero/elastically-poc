@@ -38,8 +38,7 @@ class PopulateIndexCommand extends Command
         IndexBuilder $indexBuilder,
         Indexer $indexer,
         string $name = null
-    )
-    {
+    ) {
         parent::__construct($name);
         $this->client = $client;
         $this->productRepository = $productRepository;

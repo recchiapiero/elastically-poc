@@ -105,6 +105,5 @@ class Product
         }
 
         return $dto;
-
     }
 }

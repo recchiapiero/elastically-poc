@@ -11,21 +11,21 @@ use Zenstruck\Foundry\RepositoryProxy;
 /**
  * @extends ModelFactory<Category>
  *
- * @method        Category|Proxy create(array|callable $attributes = [])
- * @method static Category|Proxy createOne(array $attributes = [])
- * @method static Category|Proxy find(object|array|mixed $criteria)
- * @method static Category|Proxy findOrCreate(array $attributes)
- * @method static Category|Proxy first(string $sortedField = 'id')
- * @method static Category|Proxy last(string $sortedField = 'id')
- * @method static Category|Proxy random(array $attributes = [])
- * @method static Category|Proxy randomOrCreate(array $attributes = [])
+ * @method        Category|Proxy                     create(array|callable $attributes = [])
+ * @method static Category|Proxy                     createOne(array $attributes = [])
+ * @method static Category|Proxy                     find(object|array|mixed $criteria)
+ * @method static Category|Proxy                     findOrCreate(array $attributes)
+ * @method static Category|Proxy                     first(string $sortedField = 'id')
+ * @method static Category|Proxy                     last(string $sortedField = 'id')
+ * @method static Category|Proxy                     random(array $attributes = [])
+ * @method static Category|Proxy                     randomOrCreate(array $attributes = [])
  * @method static CategoryRepository|RepositoryProxy repository()
- * @method static Category[]|Proxy[] all()
- * @method static Category[]|Proxy[] createMany(int $number, array|callable $attributes = [])
- * @method static Category[]|Proxy[] createSequence(array|callable $sequence)
- * @method static Category[]|Proxy[] findBy(array $attributes)
- * @method static Category[]|Proxy[] randomRange(int $min, int $max, array $attributes = [])
- * @method static Category[]|Proxy[] randomSet(int $number, array $attributes = [])
+ * @method static Category[]|Proxy[]                 all()
+ * @method static Category[]|Proxy[]                 createMany(int $number, array|callable $attributes = [])
+ * @method static Category[]|Proxy[]                 createSequence(array|callable $sequence)
+ * @method static Category[]|Proxy[]                 findBy(array $attributes)
+ * @method static Category[]|Proxy[]                 randomRange(int $min, int $max, array $attributes = [])
+ * @method static Category[]|Proxy[]                 randomSet(int $number, array $attributes = [])
  */
 final class CategoryFactory extends ModelFactory
 {
